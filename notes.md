@@ -7,6 +7,8 @@
 
 ## Quicksort
 - uses Divide and Conquer
+- worst case: O(n^2)
+- average case (choose random pivot): O(n log n)
 1. An array with one or zero items is already sorted (base case)
 2. Choose a pivot
 3. Partition the array into two subarrays: one of values less than the pivot, one of values greater than it
