@@ -67,7 +67,10 @@
 - First In, First Out
 
 ## Graph
-- a set of nodes and edges
+- A set of nodes and edges
+- Directed vs nondirected graph
+- Implementation
+    - Hash table relationships between nodes
 
 # Techniques
 ## Divide and Conquer

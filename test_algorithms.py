@@ -3,6 +3,7 @@ import binarySearch as bs
 import selectionSort as ss
 import recursion as r
 import quicksort as qs
+import breadthFirstSearch as bfs
 
 def test_binarySearch():
         assert bs.binarySearch([1, 2, 3, 4, 6, 29, 100], 100) == 6
@@ -37,3 +38,19 @@ def test_quicksort():
         assert qs.quicksort([]) == []
         assert qs.quicksort([1, 3, 2]) == [1, 2, 3]
         assert qs.quicksort([10, 2, 9, 3, 8, 5, 4, 7, 6, 1]) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def test_bfsEmpty():
+        graph = {}
+        graph["start"] = []
+        assert bfs.breadthFirstSearch(graph, "start", "end") == False
+
+def test_bfs():
+        graph = {}
+        graph["start"] = ["A", "B", "C"]
+        graph["A"] = []
+        graph["B"] = []
+        graph["C"] = []
+        assert bfs.breadthFirstSearch(graph, "start", "A") == True
+        assert bfs.breadthFirstSearch(graph, "start", "B") == True
+        assert bfs.breadthFirstSearch(graph, "start", "X") == False
+
