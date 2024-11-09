@@ -56,11 +56,20 @@
     - open addressing: look for an open spot in the subsequent slots of the array
     - separate chaining: Each slot of the array is also a linked list to hold several values
 
+## Stack
+- sequential
+- Has operations push and pop
+- Last In, First Out
+
+## Queue
+- Sequential
+- Has operations enqueue and dequeue
+- First In, First Out
+
 ## Graph
 - a set of nodes and edges
 
 # Techniques
-
 ## Divide and Conquer
 - recursive
 1. Determine a simple base case
