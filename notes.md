@@ -18,8 +18,9 @@
 - graph algorithm
 - determine the number of paths from node A to B
 - determine the length of a path from node A to B
-- For each connected node N, search N and then append all of N's neighbours to the list of nodes to search
+- For each node N to visit, visit N and then append all of N's neighbours to the list of nodes to visit
 - All first degree connections are searched before second degree connections, and so on
+- Traverse graph: O(V + E) where V is the number of nodes or verticies, and E is the number of edges
 
 # Data Structures
 
@@ -65,6 +66,7 @@
 - Sequential
 - Has operations enqueue and dequeue
 - First In, First Out
+- Enqueue: O(1)
 
 ## Graph
 - A set of nodes and edges
