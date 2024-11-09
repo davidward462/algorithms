@@ -23,12 +23,31 @@
 - insert: O(n) because of worst case where you need to move all the values to a new part of memory if it's full
 - delete: O(n)
 
-## Linked list
+## Linked List
 - not contiguous memory
 - sequential access
 - read: O(n)
 - insert: O(1)
 - delete: O(1)
+
+## Hash Table (Map)
+- Array and hash function h(x)
+- Input data into h(x) and get an index
+- read: O(1)
+- insert:
+    - best/average: O(1)
+    - worse: O(n) where either all elements are hashing to the same value, or the array is full
+- delete:
+    - best/average: O(1)
+    - worst: O(n)
+- Collision reduction:
+    - keep load factor low
+        - items in table per total number of array slots
+        - resize at load factor > ~0.7
+    - use a good hash function
+- Collision resolution:
+    - open addressing: look for an open spot in the subsequent slots of the array
+    - separate chaining: Each slot of the array is also a linked list to hold several values
 
 # Techniques
 
