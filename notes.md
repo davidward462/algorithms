@@ -14,6 +14,13 @@
 3. Partition the array into two subarrays: one of values less than the pivot, one of values greater than it
 4. Call quicksort recursively on the two subarrays
 
+## Breadth-First Search
+- graph algorithm
+- determine the number of paths from node A to B
+- determine the length of a path from node A to B
+- For each connected node N, search N and then append all of N's neighbours to the list of nodes to search
+- All first degree connections are searched before second degree connections, and so on
+
 # Data Structures
 
 ## Array
@@ -48,6 +55,9 @@
 - Collision resolution:
     - open addressing: look for an open spot in the subsequent slots of the array
     - separate chaining: Each slot of the array is also a linked list to hold several values
+
+## Graph
+- a set of nodes and edges
 
 # Techniques
 
