@@ -1,16 +1,23 @@
 def binarySearch(inputList, item):
-        left = 0
-        right = len(inputList) - 1
-
-        while (left <= right):
-                middle = (left + right) // 2
-                guess = inputList[middle]
-
-                if (guess == item):
-                        return middle
-                elif (guess < item):
-                        left =  middle + 1
-                else:
-                        right = middle - 1
-        # not found
         return None
+
+def quicksort(array):
+        if (len(array) < 2):
+                # base case
+                return array
+        else:
+                # recursive case
+                pivot_index = 0
+                pivot = array[pivot_index]
+                less = []
+                for i in range(len(array)):
+                        if (i != pivot_index):
+                                if (array[i] < pivot):
+                                        less.append(array[i])
+
+                greater = []
+                for i in range(len(array)):
+                        if (i != pivot_index):
+                                if (array[i] > pivot):
+                                        greater.append(array[i])
+                return quicksort(less) + [pivot] + quicksort(greater)
