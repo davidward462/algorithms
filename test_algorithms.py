@@ -55,7 +55,6 @@ def test_bfs():
         graph["F"] = ["C"]
         graph["G"] = ["C"]
         graph["H"] = ["C"]
-        print(graph)
         assert bfs.breadthFirstSearch(graph, "start", "A") == True
         assert bfs.breadthFirstSearch(graph, "start", "B") == True
         assert bfs.breadthFirstSearch(graph, "start", "X") == False
