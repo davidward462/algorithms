@@ -1,23 +1,22 @@
+from collections import deque
+
 def binarySearch(inputList, item):
         return None
 
 def quicksort(array):
-        if (len(array) < 2):
-                # base case
-                return array
-        else:
-                # recursive case
-                pivot_index = 0
-                pivot = array[pivot_index]
-                less = []
-                for i in range(len(array)):
-                        if (i != pivot_index):
-                                if (array[i] < pivot):
-                                        less.append(array[i])
+        return array
 
-                greater = []
-                for i in range(len(array)):
-                        if (i != pivot_index):
-                                if (array[i] > pivot):
-                                        greater.append(array[i])
-                return quicksort(less) + [pivot] + quicksort(greater)
+def breadthFirstSearch(graph, start, search_key):
+        search_queue = deque()
+        visited = []
+        search_queue += graph[start]
+
+        while search_queue:
+                vertex = search_queue.popleft()
+                if vertex not in visited:
+                        if (vertex == search_key):
+                                return True
+                        else:
+                                search_queue += graph[vertex]
+                                visited.append(vertex)
+        return False

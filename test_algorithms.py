@@ -47,10 +47,18 @@ def test_bfsEmpty():
 def test_bfs():
         graph = {}
         graph["start"] = ["A", "B", "C"]
-        graph["A"] = []
-        graph["B"] = []
-        graph["C"] = []
+        graph["A"] = ["start", "D"]
+        graph["B"] = ["start"]
+        graph["C"] = ["start", "F", "G", "H"]
+        graph["D"] = ["A", "E"]
+        graph["E"] = ["D"]
+        graph["F"] = ["C"]
+        graph["G"] = ["C"]
+        graph["H"] = ["C"]
+        print(graph)
         assert bfs.breadthFirstSearch(graph, "start", "A") == True
         assert bfs.breadthFirstSearch(graph, "start", "B") == True
         assert bfs.breadthFirstSearch(graph, "start", "X") == False
+        assert bfs.breadthFirstSearch(graph, "start", "G") == True
+        assert bfs.breadthFirstSearch(graph, "H", "A") == True
 
