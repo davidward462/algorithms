@@ -4,6 +4,7 @@ import selectionSort as ss
 import recursion as r
 import quicksort as qs
 import breadthFirstSearch as bfs
+import dijkstra as djk
 
 def test_binarySearch():
         assert bs.binarySearch([1, 2, 3, 4, 6, 29, 100], 100) == 6
@@ -61,3 +62,32 @@ def test_bfs():
         assert bfs.breadthFirstSearch(graph, "start", "G") == True
         assert bfs.breadthFirstSearch(graph, "H", "A") == True
 
+def test_dijkstra():
+        # graph
+        graph = {}
+        graph["start"] = {}
+        graph["start"]["a"] = 6
+        graph["start"]["b"] = 2
+        graph["a"] = {}
+        graph["a"]["end"] = 1
+        graph["b"] = {}
+        graph["b"]["a"] = 3
+        graph["b"]["end"] = 5
+        graph["end"] = {}
+
+        # costs
+        infinity = float("inf")
+        costs = {}
+        costs["a"] = 6
+        costs["b"] = 2
+        costs["end"] = infinity
+
+        # parents
+        parents = {}
+        parents["a"] = "start"
+        parents["b"] = "start"
+        parents["end"] = None
+
+        djk.dijkstra(graph, costs, parents)
+        final = costs["end"]
+        assert final == 6
