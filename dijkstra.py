@@ -8,8 +8,7 @@ def lowest_cost_node(costs, processed):
                         lowest_node = n
         return lowest_node
 
-
-
+# determine shortest path
 def dijkstra(graph, costs, parents):
         processed = []
 
@@ -28,3 +27,6 @@ def dijkstra(graph, costs, parents):
                                 parents[n] = node # set this node as the parent of n
                 processed.append(node) # mark node as processed
                 node = lowest_cost_node(costs, processed) # find next node to process
+
+def path(parents, start, end):
+        return None
