@@ -18,9 +18,26 @@
 - graph algorithm
 - determine the number of paths from node A to B
 - determine the length of a path from node A to B
+- Unweighted graph
 - For each node N to visit, visit N and then append all of N's neighbours to the list of nodes to visit
 - All first degree connections are searched before second degree connections, and so on
 - Traverse graph: O(V + E) where V is the number of nodes or verticies, and E is the number of edges
+
+## Dijkstra's Algorithm
+- Find the shortest path in a graph from node A to node B
+- Each edge in the path has a weight (weighted graph)
+- Only works for directed acyclic graphs, without negative edge weights
+- Basic steps:
+    1. Find the cheapest node, the one which can be arrived at in the least amount of time
+    2. Check if there is a cheaper path to the neighbours of this node. If so, update their costs
+    3. Repeat until this has been done for every node
+    4. Calculate the final path
+- Uses three hash tables:
+    1. the graph (with hash table for each node to store the weights)
+    2. the node costs
+    3. the parents to each node
+- There is an array which keeps track of the nodes that have been processed
+
 
 # Data Structures
 
