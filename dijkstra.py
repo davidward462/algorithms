@@ -28,12 +28,12 @@ def dijkstra(graph, costs, parents):
                 processed.append(node) # mark node as processed
                 node = lowest_cost_node(costs, processed) # find next node to process
 
-def path(parents, start, end):
-        nodes = []
-        nodes.append(end)
+def get_path(parents, start, end):
+        nodes = [end]
         node = parents[end]
-        nodes.append(node)
+        nodes = [node] + nodes
+
         while (node != start):
                 node = parents[node]
-                nodes.append(node)
+                nodes = [node] + nodes
         return nodes

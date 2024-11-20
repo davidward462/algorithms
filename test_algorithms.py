@@ -62,7 +62,7 @@ def test_bfs():
         assert bfs.breadthFirstSearch(graph, "start", "G") == True
         assert bfs.breadthFirstSearch(graph, "H", "A") == True
 
-def test_dijkstra():
+def test_dijkstra_A():
         # graph
         graph = {}
         graph["start"] = {}
@@ -89,5 +89,31 @@ def test_dijkstra():
         parents["end"] = None
 
         djk.dijkstra(graph, costs, parents)
-        final = costs["end"]
-        assert final == 6
+        path = djk.get_path(parents, "start", "end")
+        weight = costs["end"]
+
+        assert weight == 6
+        assert path == ["start", "b", "a", "end"]
+
+def test_dijkstra_B():
+        # graph
+        graph = {}
+        graph["start"] = {}
+        graph["A"] = {}
+        graph["B"] = {}
+        graph["C"] = {}
+        graph["D"] = {}
+        graph["end"] = {}
+        graph["start"]["A"] = 5
+        graph["start"]["B"] = 2
+        graph["B"]["A"] = 8
+        graph["B"]["D"] = 7
+        graph["A"]["C"] = 4
+        graph["A"]["D"] = 2
+        graph["D"]["end"] = 1
+        graph["C"]["end"] = 3
+        graph["C"]["D"] = 6
+
+        # costs
+
+        # parents

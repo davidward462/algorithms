@@ -41,8 +41,8 @@ def do_dijkstra():
         parents["end"] = None
 
         djk.dijkstra(graph, costs, parents)
-        solution = djk.path(parents, "start", "end")
-        return solution
+        path = djk.get_path(parents, "start", "end")
+        return path
 
 def main():
         do_bfs()
