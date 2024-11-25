@@ -5,6 +5,7 @@ import recursion as r
 import quicksort as qs
 import breadthFirstSearch as bfs
 import dijkstra as djk
+import set_cover as sc
 
 def test_binarySearch():
         assert bs.binarySearch([1, 2, 3, 4, 6, 29, 100], 100) == 6
@@ -138,5 +139,20 @@ def test_dijkstra_B():
         assert weight == 8
         assert path == ["start", "A", "D", "end"]
 
+def test_set_cover():
+        points_needed = set(["p1", "p2", "p3", "p4"])
+        sets = {}
+        sets["A"] = set(["p3", "p4"])
+        sets["B"] = set(["p1", "p2", "p3"])
+        sets["C"] = set(["p2", "p4"])
+        assert sc.setCover(sets, points_needed) == {"A", "B"}
 
-
+        # analogy with radio stations and states
+        stations = {}
+        stations["kone"] = set(["id", "nv", "ut"])
+        stations["ktwo"] = set(["wa", "id", "mt"])
+        stations["kthree"] = set(["or", "nv", "ca"])
+        stations["kfour"] = set(["nv", "ut"])
+        stations["kfive"] = set(["ca", "az"])
+        states_needed = set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"])
+        assert sc.setCover(stations, states_needed) == {"ktwo", "kthree", "kone", "kfive"}
