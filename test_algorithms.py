@@ -106,14 +106,37 @@ def test_dijkstra_B():
         graph["end"] = {}
         graph["start"]["A"] = 5
         graph["start"]["B"] = 2
-        graph["B"]["A"] = 8
-        graph["B"]["D"] = 7
         graph["A"]["C"] = 4
         graph["A"]["D"] = 2
-        graph["D"]["end"] = 1
+        graph["B"]["A"] = 8
+        graph["B"]["D"] = 7
         graph["C"]["end"] = 3
         graph["C"]["D"] = 6
+        graph["D"]["end"] = 1
 
         # costs
+        infinity = float("inf")
+        costs = {}
+        costs["A"] = 5
+        costs["B"] = 2
+        costs["C"] = infinity
+        costs["D"] = infinity
+        costs["end"] = infinity
 
         # parents
+        parents = {}
+        parents["A"] = "start"
+        parents["B"] = "start"
+        parents["C"] = None
+        parents["D"] = None
+        parents["end"] = None
+
+        djk.dijkstra(graph, costs, parents)
+        path = djk.get_path(parents, "start", "end")
+        weight = costs["end"]
+
+        assert weight == 8
+        assert path == ["start", "A", "D", "end"]
+
+
+
