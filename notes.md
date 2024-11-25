@@ -96,3 +96,13 @@
 - recursive
 1. Determine a simple base case
 2. Divide or decrease the problem until you reach the base case
+
+## Greedy Algorithms
+- For problems with no general optimal solution
+- At each step, choose the locally optimal decision
+- A greedy algorithm may generate a globally optimal solution
+- Examples:
+    - Classroom scheduling (globally optimal)
+        1. Choose the class which ends the soonest
+        2. Of the remaining classes which do not conflict, choose the one the ends soonest
+- Greedy algorithms can also be used as approximation algorithms for NP-complete problems (which have no fast solution)
