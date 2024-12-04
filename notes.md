@@ -91,7 +91,7 @@
 - Implementation
     - Hash table relationships between nodes
 
-# Techniques
+# Techniques and Problem Types
 ## Divide and Conquer
 - recursive
 1. Determine a simple base case
@@ -102,7 +102,21 @@
 - At each step, choose the locally optimal decision
 - A greedy algorithm may generate a globally optimal solution
 - Examples:
-    - Classroom scheduling (globally optimal)
+    - Classroom scheduling (has a globally optimal solution)
         1. Choose the class which ends the soonest
         2. Of the remaining classes which do not conflict, choose the one the ends soonest
-- Greedy algorithms can also be used as approximation algorithms for NP-complete problems (which have no fast solution)
+- Greedy algorithms can also be used as approximation algorithms for NP-complete problems (which have no fast solution). For example:
+    - Traveling Salesman
+    - Set-covering problem
+
+## NP-Complete (Non-polynomial time)
+- There is no fast perfect solution (would take exponential or factorial time)
+- Examples:
+    - Traveling Salesman
+    - Set-covering problem
+- Traits:
+    - Runs fast with a small number of items but slows down significantly as the number increases
+    - "All combinations of..."
+    - You need to calculate "every possible version" of something
+    - The problem can be translated into either the traveling salesman or set-covering problems
+- The solution must be approximated (like with a greedy algorithm or something else)
