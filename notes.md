@@ -109,6 +109,18 @@
     - Traveling Salesman
     - Set-covering problem
 
+## Dynamic Programming
+- Solve sub-problems which eventually result in solving the full problem
+- There are various ways of dividing up the problem
+- Some kind of optimization of values
+- Example:
+    - Knapsack problem
+    - Longest common substring
+- solution uses a grid of cells to keep track of sub-problems and corresponding solutions
+    - each cell is a subproblem
+    - the values in the cell are are usually what we are trying to optimize
+
+
 ## NP-Complete (Non-polynomial time)
 - There is no fast perfect solution (would take exponential or factorial time)
 - Examples:
