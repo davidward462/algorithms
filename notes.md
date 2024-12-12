@@ -38,7 +38,6 @@
     3. the parents to each node
 - There is an array which keeps track of the nodes that have been processed
 
-
 # Data Structures
 
 ## Array
@@ -110,16 +109,15 @@
     - Set-covering problem
 
 ## Dynamic Programming
-- Solve sub-problems which eventually result in solving the full problem
-- There are various ways of dividing up the problem
-- Some kind of optimization of values
+- Optimizing values given some a constraint
+- Problem is broken up into discrete subproblems that do not depend on one another
+- Solve the sub-problems, which eventually result in solving the full problem
 - Example:
     - Knapsack problem
     - Longest common substring
 - solution uses a grid of cells to keep track of sub-problems and corresponding solutions
     - each cell is a subproblem
     - the values in the cell are are usually what we are trying to optimize
-
 
 ## NP-Complete (Non-polynomial time)
 - There is no fast perfect solution (would take exponential or factorial time)
