@@ -33,7 +33,7 @@
     3. Repeat until this has been done for every node
     4. Calculate the final path
 - Uses three hash tables:
-    1. the graph (with hash table for each node to store the weights)
+    1. the graph (with hash table for each node to store the weights of the node's edges)
     2. the node costs
     3. the parents to each node
 - There is an array which keeps track of the nodes that have been processed
@@ -51,7 +51,8 @@
 
 ## Linked List
 - Not contiguous memory
-- Sequential access
+- Sequential access of data
+- Head and tail pointers
 - Read: O(n)
 - Insert: O(1)
 - Delete: O(1)
@@ -68,8 +69,8 @@
     - worst: O(n)
 - Collision reduction:
     - keep load factor low
-        - items in table per total number of array slots
-        - resize at load factor > ~0.7
+        - load factor = items in talbe / total number of array slots
+        - resize when load factor > ~0.7
     - use a good hash function
 - Collision resolution:
     - open addressing: look for an open spot in the subsequent slots of the array
@@ -79,12 +80,13 @@
 - Sequential
 - Has operations push and pop
 - Last In, First Out
+- Push and Pop: O(1)
 
 ## Queue
 - Sequential
 - Has operations enqueue and dequeue
 - First In, First Out
-- Enqueue: O(1)
+- Enqueue and dequeue: O(1)
 
 ## Graph
 - A set of nodes and edges
