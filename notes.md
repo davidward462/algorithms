@@ -1,23 +1,23 @@
 # Algorithms
 
 ## Binary Search
-
-- runtime: O(log n)
-- input array must be sorted
+- Runtime: O(log n)
+- Input array must be sorted
 
 ## Quicksort
-- uses Divide and Conquer
-- worst case: O(n^2)
-- average case (choose random pivot): O(n log n)
+- Uses Divide and Conquer
+- Base case and recursive case
+- Worst case: O(n^2)
+- Average case (choose random pivot): O(n log n)
 1. An array with one or zero items is already sorted (base case)
-2. Choose a pivot
+2. Choose a pivot (random index is good)
 3. Partition the array into two subarrays: one of values less than the pivot, one of values greater than it
 4. Call quicksort recursively on the two subarrays
 
 ## Breadth-First Search
-- graph algorithm
-- determine the number of paths from node A to B
-- determine the length of a path from node A to B
+- Graph algorithm
+- Determine the number of paths from node A to B
+- Determine the length of a path from node A to B
 - Unweighted graph
 - For each node N to visit, visit N and then append all of N's neighbours to the list of nodes to visit
 - All first degree connections are searched before second degree connections, and so on
@@ -38,30 +38,32 @@
     3. the parents to each node
 - There is an array which keeps track of the nodes that have been processed
 
+## K-Nearest Neighbours
+
 # Data Structures
 
 ## Array
-- contiguous memory
-- random access
-- read: O(1)
-- insert: O(n) because of worst case where you need to move all the values to a new part of memory if it's full
-- delete: O(n)
+- Contiguous memory
+- Random access
+- Read: O(1)
+- Insert: O(n) because of worst case where you need to move all the values to a new part of memory if it's full
+- Delete: O(n)
 
 ## Linked List
-- not contiguous memory
-- sequential access
-- read: O(n)
-- insert: O(1)
-- delete: O(1)
+- Not contiguous memory
+- Sequential access
+- Read: O(n)
+- Insert: O(1)
+- Delete: O(1)
 
 ## Hash Table (Map)
 - Array and hash function h(x)
 - Input data into h(x) and get an index
-- read: O(1)
-- insert:
+- Read: O(1)
+- Insert:
     - best/average: O(1)
     - worse: O(n) where either all elements are hashing to the same value, or the array is full
-- delete:
+- Delete:
     - best/average: O(1)
     - worst: O(n)
 - Collision reduction:
@@ -74,7 +76,7 @@
     - separate chaining: Each slot of the array is also a linked list to hold several values
 
 ## Stack
-- sequential
+- Sequential
 - Has operations push and pop
 - Last In, First Out
 
@@ -92,7 +94,7 @@
 
 # Techniques and Problem Types
 ## Divide and Conquer
-- recursive
+- Recursive
 1. Determine a simple base case
 2. Divide or decrease the problem until you reach the base case
 
