@@ -118,6 +118,15 @@
 - solution uses a grid of cells to keep track of sub-problems and corresponding solutions
     - each cell is a subproblem
     - the values in the cell are are usually what we are trying to optimize
+### Longest Common Substring and Subsequence
+- Subsequence: any characters which are matching
+    - if letters are equal, set cell to grid[i-1][j-1] + 1
+    - if letters are different, set cell to max(grid[i-1][j], grid[i][j-1])
+- Substring: contiguous set of characters which are matching
+    - if letters are equal, set cell to grid[i-1][j-1] + 1
+    - if letters are different, set cell to 0 
+- Number in the cells are the length of the string or sequence we are measuring
+- Answer is the largest value in the grid
 
 ## NP-Complete (Non-polynomial time)
 - There is no fast perfect solution (would take exponential or factorial time)
