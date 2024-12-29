@@ -127,6 +127,12 @@
 - Implementation
     - Hash table relationships between nodes
 
+## Inverted Index
+- Can be used in a search engine
+- The key is a string or word
+- The value are the pages on which the string or words appear
+- Maps words to webpages (or some other location)
+
 # Techniques and Problem Types
 ## Divide and Conquer
 - Recursive
