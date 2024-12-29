@@ -38,7 +38,25 @@
     3. the parents to each node
 - There is an array which keeps track of the nodes that have been processed
 
-## K-Nearest Neighbours
+## K-Nearest Neighbours Algorithm
+- Catagorize instances into classes
+- Simple version:
+1. Get an instance x to classify, and a classifier
+2. Look at the k-nearest instances (neighbours) to x
+3. Classify x as the class to which the most neighbours belong
+
+### Feature Extraction
+- Features of data can be measured so instances can have coordinates on a graph
+- Convert an item into a set of numbers
+- The distance between items can be determined
+    - Euclidian distance (for any number of dimensions): sqrt( (a1 - a2)^2 + (b1 - b2)^2 + ... )
+    - Cosine similarity
+
+### Regression
+- Predict a response
+- e.g. Predict a user's movie rating
+    - Look at how the k-nearest neighbours to someone on Netflix rated a movie
+    - Take the average of the ratings
 
 # Data Structures
 
