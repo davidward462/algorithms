@@ -64,6 +64,7 @@
 - Contiguous memory
 - Random access
 - Read: O(1)
+- Search: O(log n) using binary search
 - Insert: O(n) because of worst case where you need to move all the values to a new part of memory if it's full
 - Delete: O(n)
 
@@ -105,6 +106,20 @@
 - Has operations enqueue and dequeue
 - First In, First Out
 - Enqueue and dequeue: O(1)
+
+## Binary Search Tree
+- All nodes have at most two children
+- The left child contains a value less than the parent, right child contains a value greater than the parent (or vice versa)
+- Search:
+    - average/best: O(log n) 
+    - worst: O(n)
+- Insert: 
+    - average/best: O(log n) for a balanced tree
+    - worse: O(n) for an unbalanced tree which has become a linked list
+- Delete: 
+    - average/best: O(log n) for a balanced tree
+    - worse: O(n) for an unbalanced tree which has become a linked list
+- No random access
 
 ## Graph
 - A set of nodes and edges
